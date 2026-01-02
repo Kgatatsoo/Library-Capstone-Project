@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import helloView
+from .views import helloView,addBookView
 
 urlpatterns = [
-    path('', helloView, name='home'),  # root of app → works for / and /api/
+    path('', helloView, name='home'),
+    path("add-book/",addBookView)
 ]
