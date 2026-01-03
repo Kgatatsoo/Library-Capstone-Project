@@ -36,24 +36,25 @@
   <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">id</th>
+      <th scope="col">index</th>
       <th scope="col">Title</th>
       <th scope="col">Price</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
+    {% for i in books %}
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{i.title}}</td>
+      <td>{{i.price}}</td>
       <td>
 
-        <button type="button" class="btn btn-success">Edit </button>
+        <a href="/edit-book/{{i.id}}"><button type="button" class="btn btn-success">Edit </button></a>
         <button type="button" class="btn btn-danger">Remove</button>
       </td>
     </tr>
-   
+   {% endfor %}
    
   </tbody>
 </table>

@@ -4,7 +4,8 @@ from django.http import HttpResponse,HttpResponseRedirect
 from .models import Book
 
 def helloView(request):
-    return render(request, "viewbook.html") 
+    books=Book.objects.all()
+    return render(request, "viewbook.html",{"books":books}) 
 
 
 def addBookView(request):
@@ -35,3 +36,8 @@ def addBook(request):
 
         return HttpResponseRedirect('/')
 
+def editBook(request):
+    pass
+ 
+def editBookView(request):
+    return render(request,"edit-book.html")

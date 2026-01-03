@@ -26,9 +26,9 @@
   </div>
 </nav>
 <div class="container">
-    <h1>Add Book</h1>
+    <h1>Edit Book</h1>
 
-    <form action="addbookdata" method="post">
+    <form action="/edit-book/edit" method="post">
         {% csrf_token %}
   <div class="form-group">
     <label for="Title">Title</label>
@@ -39,7 +39,7 @@
     
   </div>
   
-  <button type="submit" class="btn btn-primary">Checkout</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
  
 <br>
